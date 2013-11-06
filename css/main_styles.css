@@ -1,0 +1,440 @@
+/************************ RESET ******************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*END OF RESETS*/
+/*COLORS
+
+red:"#dc043c"
+orange:"#cc5944"
+blue:"#0cc594"
+green:"#00cc59"
+dark red color="#ae032f"
+light red color="#f23f6d"
+dark orange color="#db4025"
+light orange color="#f6806a"
+dark blue color="#049a72"
+light blue color="#12f0b5"
+dark green color="#059444"
+light green color="#0df271"
+*/
+/*FONTS*/
+@font-face {
+    font-family: 'oleo_scriptbold';
+    src: url('../fonts/oleo/oleoscript-bold-webfont.eot');
+    src: url('../fonts/oleo/oleoscript-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oleo/oleoscript-bold-webfont.woff') format('woff'),
+         url('../fonts/oleo/oleoscript-bold-webfont.ttf') format('truetype'),
+         url('../fonts/oleo/oleoscript-bold-webfont.svg#oleo_scriptbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oleo_scriptregular';
+    src: url('../fonts/oleo/oleoscript-regular-webfont.eot');
+    src: url('../fonts/oleo/oleoscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oleo/oleoscript-regular-webfont.woff') format('woff'),
+         url('../fonts/oleo/oleoscript-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oleo/oleoscript-regular-webfont.svg#oleo_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/osans/opensans-bold.eot');
+    src: url('../fonts/osans/opensans-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-bold.woff') format('woff'),
+         url('../fonts/osans/opensans-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/osans/opensans-regular.eot');
+    src: url('../fonts/osans/opensans-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-regular.woff') format('woff'),
+         url('../fonts/osans/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+    background:#e5e5e5;
+    background:url(../images/bg.png) repeat;
+    color:#262626;
+    font-family:'OpenSansRegular';
+    min-height:100%;
+    min-width:320px;
+}
+body{
+    overflow-x:hidden;
+    min-width:320px!important;
+}
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+/*HEADER*/
+header{
+    min-height:23.46666666666667%;
+    overflow:hidden;
+    position:relative;
+}
+#wrapper_1{
+    margin:1em 0;
+    min-height:80px;
+}
+header h1{
+    color:#cc5944;
+    font-family:'oleo_scriptregular';
+    font-size:3em;
+    text-align:center;
+}
+header p{
+    color:#cc5944;
+    font-family:'OpenSansBold';
+    font-size:1.5em;
+    text-align:center;
+}
+#wrapper_2{
+    width:100%;
+    min-height:2em;
+    vertical-align:middle;
+    overflow:hidden;
+    background:#30905d;
+}
+header h2{
+    width:50%;
+    min-height:2em;
+    float:left;
+    font-family:'oleo_scriptregular';
+    font-size:1.875em;
+    color:#fff;
+    padding-top:0.5em;
+}
+.left{
+    padding-right:10%;
+    text-align:right;
+    
+}
+.right{
+    background:#cc6344;
+    padding-left:10%;
+}
+.or{
+    width:118px;
+    height:111px;
+    background:url(../images/or.png) no-repeat;
+    background-size:100%;
+    position:absolute;
+    z-index:9999;
+    left:50%;
+    margin-left:-43px;
+    margin-top:-70px;
+    clear:left;
+}
+/*END OF HEADER*/
+/*CONTAINER*/
+.container{
+    font-family:'oleo_scriptregular';
+    width:61.53846153846154%;
+    margin:0 auto;
+    text-align:center;
+    min-height:76.5333333333%;
+}
+.container p{
+    color:#595858;
+    font-size:2.3125em;
+    margin:0 0 2%;
+    padding-top:2%;
+    height:26.48083623%;
+}
+.faces{
+    display: table;
+    width: 100%;
+    padding:0 2%;
+    color:#dc043c;
+    font-size:3em;
+    height:51.39372822%;
+    overflow:hidden;
+}
+.faces > div, .faces > a{
+    display: table-cell;
+    vertical-align: top;
+}
+.faces a:hover{
+    opacity:0.5;
+}
+#alex{
+    background:url(../images/alex.png) no-repeat;
+    background-size:100%;
+    width:285px;
+    height:295px;
+}
+#and{
+    padding:90px 0 120px;
+}
+#maria{
+    background:url(../images/maria.png) no-repeat;
+    background-size:100%;
+    width:262px;
+    height:293px;
+}
+#click{
+    font-family:'OpenSansBold';
+    color:#059444;
+    padding:0 20%;
+    text-align:center;
+}
+#click h4{
+    font-size:1.5em;
+}
+#click h3{
+    font-size:1.875em;
+    color:#00cc59;
+}
+#click h2{
+    font-size:3em;
+    color:#00cc59;
+}
+#click h1{
+    font-size:3em;
+    color:#059444;
+    text-transform:uppercase;
+}
+/*END OF CONTAINER*/
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 997px){
+    .right{
+        padding-top:0.3em;
+        padding-bottom:0.3em;
+    }
+    .left{
+        padding-top:0.7em;
+    }
+    .container{
+        width:86%;
+    }
+    .or{
+        margin-top:-81px;
+    }
+    #click{
+        padding:0 20% 20%;
+    }
+}
+@media only screen and (max-width: 850px){
+    .container{
+        width:96%;
+    }
+    .left{
+        padding-left:5%;
+        padding-top:0.3em;
+    }
+     .right{
+        padding-right:5%;
+    }
+}
+@media only screen and (max-width: 601px){
+    #and{
+        font-size:1em;
+        padding-top:40px;
+    }
+     .left, .right{
+        float:none;
+        width:100%;
+        padding:0.6em 2%;
+        text-align:center;
+        font-size:1.7em;
+    }
+    .or{
+        margin-top:-82px;
+        width:59px;
+        margin-left:-12px;
+    }
+    .container p{
+        margin:3% 0 5%;
+        font-size:1.78em;
+    }
+    #and{
+        font-size:0.95em;
+        padding-top:30px;
+    }
+    #click{
+        margin-top:-40px;
+        padding:0 0 20% 0;
+    }
+}
+@media only screen and (max-width: 454px){
+    #click{
+        margin-top:-100px;
+    }
+    #click h4{
+        font-size:1.2em;
+}
+    #click h3{
+        font-size:1.4em;
+    }
+    #click h2{
+        font-size:1.9em;
+    }
+    #click h1{
+        font-size:1.8em;
+    }
+    #and{
+        font-size:0.75em;
+        padding-top:20px;
+    }
+    #wrapper_1 h1{
+        font-size:2.1em;
+    }
+    #wrapper_1 p{
+        font-size:1.38em;
+    }
+    #wrapper_1{
+        min-height:50px;
+    }
+    #wrapper_2 h2{
+        font-size:1.65em;
+    }
+    
+}
+@media only screen and (max-width: 446px){
+    .or{
+        margin-top:-78px;
+    }
+}
+@media only screen and (max-width: 365px){
+    .or{
+        width:52px;
+        margin-left:-20px;
+        margin-top:-79px;
+    }
+    #click{
+        margin-top:-120px;
+    }
+    #click h4{
+        font-size:0.9em;
+}
+    #click h3{
+        font-size:1em;
+    }
+    #click h2{
+        font-size:1.5em;
+    }
+    #click h1{
+        font-size:1.5em;
+    }
+    .container p{
+        font-size:1.5em;
+        margin:5% 0 10%;
+    }
+    #and{
+        font-size:0.5em;
+        padding-top:10px;
+    }
+    #wrapper_1 h1{
+        font-size:1.75em;
+    }
+    #wrapper_1 p{
+        font-size:1.2em;
+    }
+    #wrapper_1{
+        min-height:50px;
+    }
+    #wrapper_2 h2{
+        font-size:1.5em;
+    }
+    .left, .right{
+        float:none;
+        width:100%;
+        padding:0.3em 2%;
+        text-align:center;
+        line-height:2em;
+    }
+}
+@media only screen and (max-width: 340px){
+    .or{
+        left:90%;
+        margin-top:-84px;
+    }
+    .left, .right{
+        line-height:1em;
+        text-align:center;
+        padding-left:3%;
+        padding-right:50px;
+    }
+    .container p{
+        margin:5% 0;
+    }
+}
+@media only screen and (max-width: 320px){
+    .left, .right{
+        text-align:center;
+        padding-right:80px;
+        padding-left:2%;
+        min-width:100%;
+    }
+    #wrapper_2{
+        width:100%;
+    }
+    .container p{
+        margin-bottom:10%;
+    }
+    #alex{
+        width:142px;
+        height:147px;
+    }
+    #maria{
+        width:131px;
+        height:147px;
+    }
+    body{
+        min-width:320px;
+        overflow:auto;
+    }
+    #click{
+        margin-top:0;
+    }
+}
