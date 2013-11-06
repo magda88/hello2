@@ -437,3 +437,18 @@ ul {
     background-position:50% 100%;
 }
 /*END OF SOCIO CONTACTS*/
+/*UP BUTTON*/
+#up_button a{
+    display:block;
+    width:70px;
+    height:75px;
+    background:url(../images/up.png) 0 0 no-repeat;
+    background-size:100%;
+    position:fixed;
+    right:20px;
+    bottom:40px;
+    opacity:0.5;
+}
+#up_button a:hover{
+    opacity:1;
+}

@@ -29,18 +29,18 @@
         <div class="container">
             <div class='wrapper'>
                 <ul id="nav">
-                    <li class="item about"><a href="">About</a></li>
-                    <li class="item portfolio"><a href="">Portfolio</a></li>
-                    <li class="item skills"><a href="">Skills</a></li>
-                    <li class="item contact"><a href="">Contact me</a></li>
+                    <li class="item about"><a href="#about">About</a></li>
+                    <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
+                    <li class="item skills"><a href="#skills">Skills</a></li>
+                    <li class="item contact"><a href="#contact">Contact me</a></li>
                 </ul>
             </div>
             <p class="hello">Hello!<br>My name is Alexander Begoon, I’m a freelance programmer from Russia.</p>
-            <h1 class="about">I'm a web developer</h1>
+            <h1 class="about" id="about">I'm a web developer</h1>
             <p>I am a highly resourceful, innovative, and competent PHP developer with extensive experience in the layout, design and coding of websites specifically in PHP format.
 Possessing considerable knowledge of the development of web applications and scripts using PHP programming language and MySQL databases.
 Experienced in developing applications and solutions for a wide range of corporate, charity and public sector clients and having the enthusiasm and ambition to complete projects to the highest standard.</p>
-            <h1 class="portfolio">Portfolio of work</h1>
+            <h1 class="portfolio" id="portfolio">Portfolio of work</h1>
             <div class="wrapper">
                 <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
                     <div class="flipper">
@@ -49,7 +49,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <h3>Online Shop</h3>
                         </div>
                         <div class="back">
-                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="">http://buyin.es</a></p>
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="http://buyin.es">http://buyin.es</a></p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <h3>Bulk and wedding flowers</h3>
                         </div>
                         <div class="back">
-                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="">http://bunchesdirect.ca</a></p>
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="http://bunchesdirect.ca">http://bunchesdirect.ca</a></p>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <h3>Mobile website for ecommerce</h3>
                         </div>
                         <div class="back">
-                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="">http://m.bloomex.ca/</a></p>
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="http://m.bloomex.ca/">http://m.bloomex.ca/</a></p>
                         </div>
                     </div>
                 </div>
@@ -82,12 +82,12 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <h3>Another project of Bloomex company</h3>
                         </div>
                         <div class="back">
-                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="">http://www.bloomaday.com/</a></p>
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see on <a href="http://www.bloomaday.com/">http://www.bloomaday.com/</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <h1 class="skills">Skills</h1>
+            <h1 class="skills" id="skills">Skills</h1>
             <div class='wrapper'>
                 <div class="skill">php</div>
                 <div class="skill">oop</div>
@@ -105,50 +105,55 @@ Experienced in developing applications and solutions for a wide range of corpora
                 <div class="skill">svn</div>
                 <div class="skill">ebay-api</div>
             </div>
-            <h1 class="contact">Contact me</h1>
-            <form action="/" method='post' id="contact_form">
-                <div>
-                    <label for='contact_name'>
-                        <span>Your name</span>
-                        <input type="text" id='contact_name' required tabindex="1">
-                    </label>
-                </div>
-                <div>
-                    <label for='contact_email'>
-                        <span>Your email</span>
-                        <input type="email" id='contact_email'required tabindex="2">
-                    </label>
-                </div>
-                <div>
-                    <label for='contact_company'>
-                        <span>Your company name</span>
-                        <input type="text" id='contact_company'>
-                    </label>
-                </div>
-                <div>
-                    <label for="contact_message">
-                        <span>Message</span>
-                        <textarea id='contact_message' required tabindex="3"></textarea>
-                    </label>
-                </div>
-                <div>
-                <button name="submit" type="submit" id="contact_submit">Send me a message</button>
-                </div>
-            </form>
-            <div class="socio_contacts">
-                <span>email me:</span>
-                <a href="mailto:alexbassmusic@gmail.com"></a>
-                <span>find me on:</span>
-                <div class="social_icons">
-                    <ul class="icons">
-                        <li><a href="https://www.odesk.com/users/PHP-developer_~01ae8f6e1a81c189cf?tot=3&pos=0" id="odesk_icon"></a></li>
-                        <li><a href="https://github.com/alexbassmusic" id="git_icon"></a></li>
-                        <li><a href="http://www.linkedin.com/profile/view?id=217625069&authType=name&authToken=zIo-&trk=wvmx-profile-title" id="linkedin_icon"></a></li>
-                        <li><a href="#" id="skype_icon"></a></li>
-                        <li><a href="https://plus.google.com/u/0/+AlexanderBegoon/posts" id="google_plus_icon"></a></li>
-                    </ul>
+            <h1 class="contact" id="contact">Contact me</h1>
+            <div class="wrapper">
+                <form action="/" method='post' id="contact_form">
+                    <div>
+                        <label for='contact_name'>
+                            <span>Your name</span>
+                            <input type="text" id='contact_name' required tabindex="1">
+                        </label>
+                    </div>
+                    <div>
+                        <label for='contact_email'>
+                            <span>Your email</span>
+                            <input type="email" id='contact_email'required tabindex="2">
+                        </label>
+                    </div>
+                    <div>
+                        <label for='contact_company'>
+                            <span>Your company name</span>
+                            <input type="text" id='contact_company'>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="contact_message">
+                            <span>Message</span>
+                            <textarea id='contact_message' required tabindex="3"></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <button name="submit" type="submit" id="contact_submit">Send me a message</button>
+                    </div>
+                </form>
+                <div class="socio_contacts">
+                    <span>email me:</span>
+                    <a href="mailto:alexbassmusic@gmail.com"></a>
+                    <span>find me on:</span>
+                    <div class="social_icons">
+                        <ul class="icons">
+                            <li><a href="https://www.odesk.com/users/PHP-developer_~01ae8f6e1a81c189cf?tot=3&pos=0" id="odesk_icon" title="odesk.com"></a></li>
+                            <li><a href="https://github.com/alexbassmusic" id="git_icon" title="github.com"></a></li>
+                            <li><a href="http://www.linkedin.com/profile/view?id=217625069&authType=name&authToken=zIo-&trk=wvmx-profile-title" id="linkedin_icon" title="linkedin.com"></a></li>
+                            <li><a href="#" id="skype_icon" title="skype.com"></a></li>
+                            <li><a href="https://plus.google.com/u/0/+AlexanderBegoon/posts" id="google_plus_icon" title="plus.google.com"></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="up_button">
+            <a href="#" title="up"></a>
         </div>
             <!--<div class="footer">
                 <hr>
@@ -177,6 +182,18 @@ Experienced in developing applications and solutions for a wide range of corpora
   });
 </script>
 <!-- AddThis Smart Layers END -->
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527a5169751f3512"></script>
+<!-- AddThis Button END -->
         <script src="js/button.js"></script>
         </body>
 </html>      
