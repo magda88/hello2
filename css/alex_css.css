@@ -152,7 +152,7 @@ header > p {
 .border{
     height:8px;
     background:url(../images/header_border.png) repeat-x;
-    margin-top:-8px;
+    margin-top:-7px;
 }
 /*END OF HEADER*/
 /*CONTENT BOX*/
@@ -367,7 +367,7 @@ ul {
     text-transform:uppercase;
     padding:0.2em;
     text-align:center;
-    margin:40px 0;
+    margin:40px 0 100px;
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     border-radius:10px;
