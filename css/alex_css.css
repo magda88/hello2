@@ -166,13 +166,13 @@ ul {
     float:right;
 }
 #nav li{
-    padding:0.4em;
-    display:inline-table;
+    padding:0.4em 1em;
+    display:inline;
+    float:left;
 }
 #nav li a{
     text-decoration:none;
-    display:block;
-    float:left;
+    display:inline-block;
     text-transform:uppercase;
     font-size:1.5em;
     color:inherit;
@@ -180,6 +180,9 @@ ul {
 }
 #nav li a:hover{
     color:#262626;
+}
+li#small_menu{
+    display:none;
 }
 .wrapper{
     padding-bottom:2em;
@@ -393,6 +396,15 @@ ul {
     display:block;
     margin-top:1em;
 }
+.socio_contacts a{
+    color:#262626;
+    font-family: 'OpenSansBold';
+    font-size:1.5em;
+    display:block;
+    text-transform:uppercase;
+    text-decoration:none;
+    margin:0.9em 0;
+}
 #my_email{
     color:#262626!important;
     font-size:1.5em;
@@ -452,3 +464,39 @@ ul {
 #up_button a:hover{
     opacity:1;
 }
+/*END OF UP BUTTON*/
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1219px){
+    #contact_form, .socio_contacts{
+        float:none;
+        width:60%;
+    }
+}
+@media only screen and (max-width: 840px){
+    #contact_form, .socio_contacts{
+        width:80%;
+    }
+    .hello{
+        width:100%!important;
+        padding:0 0 1em!important;
+    }
+}
+
+@media only screen and (max-width: 819px){
+    #nav li{
+        float:none;
+        display:list-item;
+        padding:0.2em 0;
+        border-bottom:4px solid;
+    }
+    #nav li a{
+        font-size:1em;
+    }
+    li#small_menu{
+        text-align:center;
+        border-top:4px solid;
+        margin:0.2em 0;
+        background:#cfcfcf;
+    }
+}
+/*END OF MEDIA QUERIES*/

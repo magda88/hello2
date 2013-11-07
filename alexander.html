@@ -3,11 +3,66 @@
     <head>
         <title>Alexander</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
         <link rel="stylesheet" href="css/alex_css.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(function(){
+                /*
+                    $(window).resize(function(){
+                        var w = $(window).width();
+                            if(w < 819 ){
+                               $('#nav *[id != "small_menu"]').hide();
+                               $('#small_menu, #small_menu a').css({'display':'list-item'});
+                               $('#small_menu').click(function(e){
+                                    e.preventDefault();
+                                    $('#nav *[id != "small_menu"]').css({'display':'list-item','float':'none'}).show();
+                                    $('#nav').slideToggle(2000);
+                               });
+                                        }
+                    });
+    */
+    
+        $(window).resize(function(){
+        var w = $(window).width();
+            if(w < 819 ){
+                var big = $(".item:not('#small_menu')");
+                big.hide();
+                $("#small_menu").on('click', function(){
+                big.stop().slideToggle(1000);    
+               });
+                        }
+                        else {
+                           big.show(); 
+                        }
+    });
+        
+        
+        
+        
+    
+});
+            
+     
+     
+     
+       /* $(window).resize(function(){
+        var w = $(window).width();
+            if(w < 819 ){
+              $('#nav *[id != "small_menu"]').hide();
+               $("#small_menu").hover(function(){
+                 $('#nav *[id != "small_menu"]').stop(false,true).show();  
+               }, function(){
+                   $('#nav *[id != "small_menu"]').stop(false,true).hide();  
+               });
+                        }
+    });
+});*/
+            
+        </script>
     </head>
     <body>
          <div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
-            
         </div>
         <script>
             
@@ -33,6 +88,7 @@
                     <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
                     <li class="item skills"><a href="#skills">Skills</a></li>
                     <li class="item contact"><a href="#contact">Contact me</a></li>
+                    <li class="item" id="small_menu"><a href="#">Menu</a></li>
                 </ul>
             </div>
             <p class="hello">Hello!<br>My name is Alexander Begoon, I’m a freelance programmer from Russia.</p>
@@ -138,7 +194,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                 </form>
                 <div class="socio_contacts">
                     <span>email me:</span>
-                    <a href="mailto:alexbassmusic@gmail.com"></a>
+                    <a href="mailto:alexbassmusic@gmail.com">alexbassmusic@gmail.com</a>
                     <span>find me on:</span>
                     <div class="social_icons">
                         <ul class="icons">
@@ -150,7 +206,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
         <div id="up_button">
             <a href="#" title="up"></a>
