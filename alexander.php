@@ -1,3 +1,10 @@
+<?php
+    if (!class_exists('KeyCAPTCHA_CLASS')) {
+	// Replace '/home/path_to_keycaptcha_file/' with the real path to keycaptcha.php
+	include('keycaptcha/keycaptcha.php');
+}
+        $kc_o = new KeyCAPTCHA_CLASS();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -136,6 +143,9 @@ Experienced in developing applications and solutions for a wide range of corpora
                     </div>
                     <div>
                         <button name="submit" type="submit" id="postbut">Send me a message</button>
+                    </div>
+                    <div>
+                        <?php echo $kc_o->render_js();?>
                     </div>
                     <input type="hidden" name="capcode" id="capcode" value="false" />
                 </form>
