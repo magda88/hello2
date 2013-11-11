@@ -134,11 +134,11 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <textarea id='contact_message' required tabindex="3"></textarea>
                         </label>
                     </div>
-                    <div>
-                        <button name="submit" type="submit" id="postbut">Send me a message</button>
+                    <div style="margin:0 auto;width:360px">
+                        <?php echo $kc_o->render_js();?>
                     </div>
                     <div>
-                        <?php echo $kc_o->render_js();?>
+                        <button name="submit" type="submit" id="postbut">Send me a message</button>
                     </div>
                     <input type="hidden" name="capcode" id="capcode" value="false" />
                 </form>
