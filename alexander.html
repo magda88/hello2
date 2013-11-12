@@ -5,7 +5,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
         <link rel="stylesheet" href="css/alex_css.css">
-        <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
     </head>
     <body>
          <div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
@@ -27,14 +26,16 @@
             <p id="default">Welcome to Alexander's portfolio!</p>
             <p id="name-770">Alexander Begoon</p>
             <p id="subname-770">web developer</p>
+            <!-- Class "slideMenu-open" gets applied to menu -->
         </header>
         <div class="border"></div>
-        <ul class="slimmenu">
-                <li class="item about"><a href="#about">About</a></li>
-                <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
-                <li class="item skills"><a href="#skills">Skills</a></li>
-                <li class="item contact"><a href="#contact">Contact me</a></li>
+        <ul class="slideMenu slideMenu-vertical slideMenu-left" id="slideMenu">
+            <li class="item about"><a href="#about">About</a></li>
+            <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
+            <li class="item skills"><a href="#skills">Skills</a></li>
+            <li class="item contact"><a href="#contact">Contact me</a></li>
             </ul>
+        <button id="showLeft">Menu</button>
         <div class="container">
             <p class="hello">Hello!<br>My name is Alexander Begoon, I’m a freelance programmer from Russia.</p>
             <h1 class="about" id="about">I'm a web developer</h1>
@@ -163,17 +164,16 @@ Experienced in developing applications and solutions for a wide range of corpora
         <script src="js/button.js"></script>
         <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527a5169751f3512"></script>
-<script type="text/javascript">
-  addthis.layers({
-    'theme' : 'transparent',
-    'share' : {
-      'position' : 'left',
-      'numPreferredServices' : 5
-    }   
-  });
-</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527a5169751f3512"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'left',
+              'numPreferredServices' : 5
+            }   
+          });
+        </script>
 <!-- AddThis Smart Layers END -->
-
-        </body>
+    </body>
 </html>      
