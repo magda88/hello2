@@ -5,9 +5,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
         <link rel="stylesheet" href="css/alex_css.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
-         <div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
+         <!--<div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
         </div>
         <script>
             
@@ -21,7 +22,7 @@
             }
             
             setInterval('Maria_want_to_know()',300);
-        </script>    
+        </script>  -->  
         <header>
             <p id="default">Welcome to Alexander's portfolio!</p>
             <p id="name-770">Alexander Begoon</p>
@@ -29,7 +30,7 @@
             <!-- Class "slideMenu-open" gets applied to menu -->
         </header>
         <div class="border"></div>
-        <ul class="slideMenu slideMenu-vertical slideMenu-left" id="slideMenu">
+        <ul class="slideMenu" id="slideMenu">
             <li class="item about"><a href="#about">About</a></li>
             <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
             <li class="item skills"><a href="#skills">Skills</a></li>
@@ -163,17 +164,54 @@ Experienced in developing applications and solutions for a wide range of corpora
         </div>
         <script src="js/button.js"></script>
         <!-- AddThis Smart Layers BEGIN -->
-<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527a5169751f3512"></script>
         <script type="text/javascript">
           addthis.layers({
             'theme' : 'transparent',
             'share' : {
-              'position' : 'left',
+              'position' : 'right',
               'numPreferredServices' : 5
             }   
           });
         </script>
-<!-- AddThis Smart Layers END -->
+        <!-- AddThis Smart Layers END -->
+        
+        
+        <script>
+            $('#showLeft').click(function(){
+                if ($('#slideMenu').hasClass('slideMenu')){
+                    $('#slideMenu').removeClass('slideMenu');
+                    showMenu();
+                }
+                else{
+                    $('#slideMenu').addClass('slideMenu');
+                    hideMenu();
+                }
+            });
+            
+            $('#slideMenu').click(function(){
+                hideMenu();
+            });
+            
+            function showMenu(){
+                $('#slideMenu').animate({
+                    left:0,
+                    height:"100%"
+                }, 'slow', function(){
+                    $('body').append('<div id="black"></div>');
+                    $('#showLeft').html('Hide');
+                });
+            }
+            
+            function hideMenu(){
+                $('#slideMenu').animate({
+                    left:"-100%"},
+                    'slow', function(){
+                    $('#black').remove();
+                    $('#showLeft').html('Menu');
+                });
+            };
+        </script>
     </body>
 </html>      
