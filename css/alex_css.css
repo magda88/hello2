@@ -165,64 +165,62 @@ header > p {
     margin:0 auto;
 }
 /*NAVIGATION*/
-    #showLeft {
-	display:none;
-    }
-    #slideMenu {
-    }
-    #slideMenu h3 {
-            color: #fff;
-            font-size: 1.9em;
-            padding: 20px;
-            margin: 0;
-            font-weight: 300;
-            background: #4c4c4c;
-    }
-    #slideMenu a {
-            display: inline-block;
-            text-decoration:none;
-            text-transform:uppercase;
-            color: #333;
-            padding: 0.4em 1em;
-            font-size:1.5em;
-            color:inherit;
-            font-family:'OpenSansBold';
-            transition: background-color 0.5s ease-out;
-            -o-transition: background-color 0.5s ease-out;
-            -moz-transition: background-color 0.5s ease-out;
-            -webkit-transition: background-color 0.5s ease-out;
-    }
-    #slideMenu a:hover {
-            color:#262626;
-            text-decoration: none;;
-    }
-    #slideMenu {
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        display:table;
-        margin:10px 0 10px 40%;
-    }
-    .about{
-        border-color:#30905d;
-        color:#30905d;
-    }
-    .portfolio{
-        border-color:#dc043c;
-        color:#dc043c;
-    }
-    .skills{
-        border-color:#03B62B;
-        color:#03B62B;
-    }
-    .contact{
-        border-color:#f6806a;
-        color:#db4025;
-    }
-    .item{
-        border-bottom:9px solid;
-        display:inline-block;
-    }
+#showLeft {
+    display:none;
+}
+#slideMenu h3 {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 20px;
+    font-family:'OpenSansBold';
+    background: #4c4c4c;
+    cursor:pointer;
+}
+#slideMenu a {
+    display: inline-block;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: #333;
+    padding: 0.4em 1em;
+    font-size:1.5em;
+    color:inherit;
+    font-family:'OpenSansBold';
+    transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+}
+#slideMenu a:hover {
+    color:#262626;
+    text-decoration: none;;
+}
+#slideMenu {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display:table;
+    margin:10px 0 10px 40%;
+}
+.about{
+    border-color:#30905d;
+    color:#30905d;
+}
+.portfolio{
+    border-color:#dc043c;
+    color:#dc043c;
+}
+.skills{
+    border-color:#03B62B;
+    color:#03B62B;
+}
+.contact{
+    border-color:#f6806a;
+    color:#db4025;
+}
+.item{
+    border-bottom:9px solid;
+    display:inline-block;
+}
 /*END OF NAVIGATION*/
 /*GREETING*/
 .hello{
@@ -528,6 +526,8 @@ header > p {
         font-family: 'OpenSansBold';
         text-transform:uppercase;
         text-align:left;
+        padding-left:95px!important;
+        width:100%;
     }
     #name-770{
         font-size:1.875em;
@@ -565,27 +565,19 @@ header > p {
     }
     #showLeft{
         display:block;
-        border:2px solid #276d47;
-        background:#000;
-        padding:0.2em 0.6em 0.4em;
-        color:#b3b3b3;
-        font-family:'OpenSansBold';
-        text-transform:uppercase;
+        background:url(../images/menu.png) no-repeat 0 0;
+        width:50px;
+        height:50px;
         position:absolute;
         z-index:2;
         top:20px;
-        right:20px;
-        font-size:1.5em;
+        left:15px;
         outline:none;
+        border:none;
         cursor:pointer;
     }
     #showLeft:hover{
-        color:#fff;
-        background:#262626;
-        border-color:#30905d;
-    }
-    #showLeft > span{
-        display:block;
+        background:url(../images/menu.png) no-repeat 100% 0;
     }
     .item{
         display:block;
@@ -649,9 +641,6 @@ header > p {
         .hello{
             padding-left:0!important;        
         }
-        #showLeft{
-            right:10px;
-        }
     }
     @media only screen and (max-width: 458px){
         #name-770{
@@ -660,13 +649,6 @@ header > p {
         #subname-770{
             font-size:1.1em;
             padding:0.7em 0 0;
-        }
-        #showLeft{
-            padding:0.5em;
-            left:100%;
-            margin-left:-70px;
-            right:0;
-            top:41px;
         }
     }
     @media only screen and (max-width: 426px){

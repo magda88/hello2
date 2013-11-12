@@ -8,7 +8,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     </head>
     <body>
-         <!--<div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
+        <!--<div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
         </div>
         <script>
             
@@ -36,7 +36,7 @@
             <li class="item skills"><a href="#skills">Skills</a></li>
             <li class="item contact"><a href="#contact">Contact me</a></li>
             </ul>
-        <button id="showLeft"><span>&#9776;</span></button>
+        <button id="showLeft"></button>
         <div class="container">
             <p class="hello">Hello!<br>My name is Alexander Begoon, I’m a freelance programmer from Russia.</p>
             <h1 class="about" id="about">I'm a web developer</h1>
@@ -195,12 +195,12 @@ Experienced in developing applications and solutions for a wide range of corpora
             });
             
             function showMenu(){
+                //$('<h3>HIDE</h3>').insertBefore('#slideMenu li:first');
                 $('#slideMenu').animate({
                     left:0,
                     height:"100%"
                 }, 'slow', function(){
                     $('body').append('<div id="black"></div>');
-                    $('#showLeft').html('Hide');
                 });
             }
             
@@ -209,8 +209,9 @@ Experienced in developing applications and solutions for a wide range of corpora
                     left:"-100%"},
                     'slow', function(){
                     $('#black').remove();
-                    $('#showLeft').html('&#9776;');
+                    //$('#slideMenu h3').remove();
                 });
+                
             };
         </script>
     </body>
