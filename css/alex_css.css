@@ -567,7 +567,7 @@ header > p {
         display:block;
         border:2px solid #276d47;
         background:#000;
-        padding:0.6em 1em;
+        padding:0.2em 0.6em 0.4em;
         color:#b3b3b3;
         font-family:'OpenSansBold';
         text-transform:uppercase;
@@ -575,7 +575,7 @@ header > p {
         z-index:2;
         top:20px;
         right:20px;
-        font-size:1em;
+        font-size:1.5em;
         outline:none;
         cursor:pointer;
     }
@@ -583,6 +583,9 @@ header > p {
         color:#fff;
         background:#262626;
         border-color:#30905d;
+    }
+    #showLeft > span{
+        display:block;
     }
     .item{
         display:block;
@@ -633,9 +636,22 @@ header > p {
         .container{
             width:90%;
         }
+        #up_button a{
+            width:40px;
+            height:43px;
+            right:2px;
+        }
     }
-    @media only screen and (max-width: 586px){
-        
+    @media only screen and (max-width: 534px){
+        header > p{
+            width:90%;
+        }
+        .hello{
+            padding-left:0!important;        
+        }
+        #showLeft{
+            right:10px;
+        }
     }
     @media only screen and (max-width: 458px){
         #name-770{
@@ -645,10 +661,12 @@ header > p {
             font-size:1.1em;
             padding:0.7em 0 0;
         }
-        #up_button a{
-            width:40px;
-            height:43px;
-            right:2px;
+        #showLeft{
+            padding:0.5em;
+            left:100%;
+            margin-left:-70px;
+            right:0;
+            top:41px;
         }
     }
     @media only screen and (max-width: 426px){
