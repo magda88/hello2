@@ -195,7 +195,7 @@ Experienced in developing applications and solutions for a wide range of corpora
             });
             
             function showMenu(){
-                //$('<h3>HIDE</h3>').insertBefore('#slideMenu li:first');
+                $('<h3>MENU</h3>').insertBefore('#slideMenu li:first');
                 $('#slideMenu').animate({
                     left:0,
                     height:"100%"
@@ -209,7 +209,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                     left:"-100%"},
                     'slow', function(){
                     $('#black').remove();
-                    //$('#slideMenu h3').remove();
+                    $('#slideMenu h3').remove();
                 });
                 
             };
