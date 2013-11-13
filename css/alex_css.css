@@ -129,7 +129,7 @@ html, body{
     color:#262626;
     font-family:'OpenSansRegular';
     min-height:100%;
-    min-width:320px;
+    min-width:100%;
 }
 *{
     box-sizing:border-box;
@@ -268,6 +268,7 @@ header > p {
 }
 .front img{
     max-width:100%;
+    min-height:84.6522%;
     display:block;
     margin:0 auto;
 }
@@ -673,7 +674,7 @@ header > p {
             display:none;
         }
         body{
-           min-width:426px;
+           min-width:455px;
         }
     }
 /*END OF MEDIA QUERIES*/

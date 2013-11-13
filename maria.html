@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maria</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+        <link rel="stylesheet" href="css/alex_css.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <!--<div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
+        </div>
+        <script>
+            
+            function Maria_want_to_know(){
+                var height = window.outerHeight;
+                var width = window.outerWidth;
+
+                var monitor = document.getElementById('window_dimensions');
+
+                monitor.innerHTML = 'Height: '+height+'px<br>Width: '+width + 'px';
+            }
+            
+            setInterval('Maria_want_to_know()',300);
+        </script>-->
+        <header>
+            <p id="default">Welcome to Maria's portfolio!</p>
+            <p id="name-770">Maria Begoon</p>
+            <p id="subname-770">front-end developer</p>
+            <!-- Class "slideMenu-open" gets applied to menu -->
+        </header>
+        <div class="border"></div>
+        <ul class="slideMenu" id="slideMenu">
+            <li class="item about"><a href="#about">About</a></li>
+            <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
+            <li class="item skills"><a href="#skills">Skills</a></li>
+            <li class="item contact"><a href="#contact">Contact me</a></li>
+            </ul>
+        <button id="showLeft"></button>
+        <div class="container">
+            <p class="hello">Hello!<br>My name is Maria Begoon, I’m a freelance web designer and front-end developer from Russia.</p>
+            <h1 class="about" id="about">I'm a web developer</h1>
+            <p>I cam make your PSD to HTML/CSS code, responsive, cross-browser and valid. I know how to use Javascript and jQuery for web site's front-end development.
+Also I can make design for your web site or redesign it. (I’m good at Photoshop). I like to create a modern and impressive sites. While creating them, I try to combine simplicity, functionality and the latest design trends.</p>
+            <h1 class="portfolio" id="portfolio">Portfolio of work</h1>
+            <div class="wrapper">
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/buyin.jpg" alt="online_shop" width="100%" height="auto">
+                            <h3>Re-design online drugstore</h3>
+                        </div>
+                        <div class="back">
+                            <p>I was responsible for redesign of the main page and banners.<br>I made a new look for header, footer and some icons using corporative style colors.<br>Live you can see on <a href="http://www.tufarmaciaonline.net/">http://www.tufarmaciaonline.net/</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/bunchesdirect.jpg" alt="online_shop" width="100%" height="auto">
+                            <h3>Design banners for categories of products</h3>
+                        </div>
+                        <div class="back">
+                            <p>I designed banners for product's categories for online drugstore with wide assortment.<br>Live you can see on <a href="http://www.tufarmaciaonline.net/comprar-online">http://www.tufarmaciaonline.net/comprar-online</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/bloomex_mobile.jpg" alt="online_shop" width="100%" height="auto">
+                            <h3>Psd-to-html</h3>
+                        </div>
+                        <div class="back">
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see <a href="#">here/</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img src="images/bloom_a_day.jpg" alt="online_shop" width="100%" height="auto">
+                            <h3>Psd-to-html</h3>
+                        </div>
+                        <div class="back">
+                            <p>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Description of the project.I was responsible for....<br>Live you can see <a href="#">here/</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="skills" id="skills">Skills</h1>
+            <div class='wrapper'>
+                <div class="skill">psd-to-html</div>
+                <div class="skill">html</div>
+                <div class="skill">css</div>
+                <div class="skill">html5</div>
+                <div class="skill">css3</div>
+                <div class="skill">javascript</div>
+                <div class="skill">jquery</div>
+                <div class="skill">graphic design</div>
+                <div class="skill">git</div>
+            </div>
+            <h1 class="contact" id="contact">Contact me</h1>
+            <div class="wrapper">
+                <form action="/" method='post' id="contact_form">
+                    <div>
+                        <label for='contact_name'>
+                            <span>Your name</span>
+                            <input type="text" id='contact_name' required tabindex="1">
+                        </label>
+                    </div>
+                    <div>
+                        <label for='contact_email'>
+                            <span>Your email</span>
+                            <input type="email" id='contact_email' required tabindex="2">
+                        </label>
+                    </div>
+                    <div>
+                        <label for='contact_company'>
+                            <span>Your company name</span>
+                            <input type="text" id='contact_company'>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="contact_message">
+                            <span>Message</span>
+                            <textarea id='contact_message' required tabindex="3"></textarea>
+                        </label>
+                    </div>
+                    <div style="margin:0 auto;width:360px">
+                        <?php echo $kc_o->render_js();?>
+                    </div>
+                    <div>
+                        <button name="submit" type="submit" id="postbut">Send me a message</button>
+                    </div>
+                    <input type="hidden" name="capcode" id="capcode" value="false" />
+                </form>
+                <div class="socio_contacts">
+                    <span>email me:</span>
+                    <a href="mailto:alexbassmusic@gmail.com">alexbassmusic@gmail.com</a>
+                    <span>find me on:</span>
+                    <div class="social_icons">
+                        <ul class="icons">
+                            <li><a href="https://www.odesk.com/users/Front-end-developer_~010e0d31b947bd0a0b?tot=3&pos=1" id="odesk_icon" title="odesk.com"></a></li>
+                            <li><a href="https://github.com/magda88" id="git_icon" title="github.com"></a></li>
+                            <li><a href="http://www.linkedin.com/profile/view?id=271001668&trk=nav_responsive_tab_profile_pic" id="linkedin_icon" title="linkedin.com"></a></li>
+                            <li><a href="#" id="skype_icon" title="skype.com"></a></li>
+                            <li><a href="https://plus.google.com/s/%D0%BC%D0%B0%D1%80%D0%B8%D1%8F%20%D0%B8%D0%B2%D0%B0%D0%BD%D1%8E%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" id="google_plus_icon" title="plus.google.com"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div id="up_button">
+            <a href="#" title="up"></a>
+        </div>
+        <script src="js/button.js"></script>
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527a5169751f3512"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'right',
+              'numPreferredServices' : 5
+            }   
+          });
+        </script>
+        <!-- AddThis Smart Layers END -->
+        
+        
+        <script>
+            $('#showLeft').click(function(){
+                if ($('#slideMenu').hasClass('slideMenu')){
+                    $('#slideMenu').removeClass('slideMenu');
+                    showMenu();
+                }
+                else{
+                    $('#slideMenu').addClass('slideMenu');
+                    hideMenu();
+                }
+            });
+            
+            $('#slideMenu').click(function(){
+                hideMenu();
+            });
+            
+            function showMenu(){
+                $('<h3>MENU</h3>').insertBefore('#slideMenu li:first');
+                $('#slideMenu').animate({
+                    left:0,
+                    height:"100%"
+                }, 'slow', function(){
+                    $('body').append('<div id="black"></div>');
+                });
+            }
+            
+            function hideMenu(){
+                $('#slideMenu').animate({
+                    left:"-100%"},
+                    'slow', function(){
+                    $('#black').remove();
+                    $('#slideMenu h3').remove();
+                });
+                
+            };
+        </script>
+    </body>
+</html>      
