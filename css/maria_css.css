@@ -306,6 +306,7 @@ header > p {
 .back p, .back a{
     color:#fff;
     padding:20px;
+    word-wrap: break-word;
 }
 .flip-container {
     -webkit-perspective: 1000;
