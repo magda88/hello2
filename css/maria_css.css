@@ -1,0 +1,681 @@
+/************************ RESET ******************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*END OF RESETS*/
+/*COLORS
+
+red:"#dc043c"
+orange:"#cc6344"
+blue:"#0cc594"
+green:"#30905d"
+dark red color="#ae032f"
+light red color="#f23f6d"
+dark orange color="#db4025"
+light orange color="#f6806a"
+dark blue color="#049a72"
+light blue color="#12f0b5"
+dark green color="#059444"
+light green color="#0df271"
+*/
+/*FONTS*/
+@font-face {
+    font-family: 'oleo_scriptbold';
+    src: url('../fonts/oleo/oleoscript-bold-webfont.eot');
+    src: url('../fonts/oleo/oleoscript-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oleo/oleoscript-bold-webfont.woff') format('woff'),
+         url('../fonts/oleo/oleoscript-bold-webfont.ttf') format('truetype'),
+         url('../fonts/oleo/oleoscript-bold-webfont.svg#oleo_scriptbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oleo_scriptregular';
+    src: url('../fonts/oleo/oleoscript-regular-webfont.eot');
+    src: url('../fonts/oleo/oleoscript-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/oleo/oleoscript-regular-webfont.woff') format('woff'),
+         url('../fonts/oleo/oleoscript-regular-webfont.ttf') format('truetype'),
+         url('../fonts/oleo/oleoscript-regular-webfont.svg#oleo_scriptregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/osans/opensans-bold.eot');
+    src: url('../fonts/osans/opensans-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-bold.woff') format('woff'),
+         url('../fonts/osans/opensans-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('../fonts/osans/opensans-italic.eot');
+    src: url('../fonts/osans/opensans-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-italic.woff') format('woff'),
+         url('../fonts/osans/opensans-italic.ttf') format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/osans/opensans-regular.eot');
+    src: url('../fonts/osans/opensans-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-regular.woff') format('woff'),
+         url('../fonts/osans/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansSemiboldRegular';
+    src: url('../fonts/osans/opensans-semibold.eot');
+    src: url('../fonts/osans/opensans-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-semibold.woff') format('woff'),
+         url('../fonts/osans/opensans-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: url('../fonts/osans/opensans-semibolditalic.eot');
+    src: url('../fonts/osans/opensans-semibolditalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/osans/opensans-semibolditalic.woff') format('woff'),
+         url('../fonts/osans/opensans-semibolditalic.ttf') format('truetype');
+    font-weight: normal;
+}
+html, body{
+    background:#e5e5e5;
+    background:url(../images/bg.png) repeat;
+    color:#262626;
+    font-family:'OpenSansRegular';
+    min-height:100%;
+    min-width:100%;
+}
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+/*HEADER*/
+header{
+    height:3.6%; /*92px;*/
+    background:#000 url(../images/dark_leather.jpg) repeat;
+    padding:1em 0;
+}
+header > p {
+    font-family: 'oleo_scriptregular';
+    font-size:3em;
+    color:#f6806a;
+    margin:0 auto;
+    width:73.84615384615385%;
+    text-align:center;
+    padding:0.7em 0;
+}
+#name-770, #subname-770{
+    display:none;
+}
+.border{
+    height:8px;
+    background:url(../images/header_border.png) repeat-x;
+    margin-top:-7px;
+}
+/*END OF HEADER*/
+/*CONTENT BOX*/
+.container{
+    width:73.84615384615385%;
+    margin:0 auto;
+}
+/*NAVIGATION*/
+#showLeft {
+    display:none;
+}
+#slideMenu h3 {
+    color: #fff;
+    font-size: 1.5em;
+    padding: 20px;
+    font-family:'OpenSansBold';
+    background: #4c4c4c;
+    cursor:pointer;
+}
+#slideMenu a {
+    display: inline-block;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: #333;
+    padding: 0.4em 1em;
+    font-size:1.5em;
+    color:inherit;
+    font-family:'OpenSansBold';
+    transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+}
+#slideMenu a:hover {
+    color:#262626;
+    text-decoration: none;;
+}
+#slideMenu {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display:inline-block;
+    margin:10px 0 10px 40%;
+}
+.about{
+    border-color:#30905d;
+    color:#30905d;
+}
+.portfolio{
+    border-color:#dc043c;
+    color:#dc043c;
+}
+.skills{
+    border-color:#03B62B;
+    color:#03B62B;
+}
+.contact{
+    border-color:#f6806a;
+    color:#db4025;
+}
+.item{
+    border-bottom:9px solid;
+    float:left;
+}
+/*END OF NAVIGATION*/
+/*GREETING*/
+.hello{
+    font-family: 'oleo_scriptregular'!important;
+    font-size:1.875em!important;
+    padding:1em 0 1em 1em!important;
+    width:50%!important;
+    line-height:1em!important;
+}
+/*END OF GREETING*/
+/*COMMON STYLES*/
+.wrapper{
+    padding-bottom:2em;
+}
+.wrapper:after{
+    content:"";
+    height:0;
+    clear:both;
+    display:block;
+    visibility:hidden;
+}
+.container h1{
+    font-family:'OpenSansBold';
+    font-size:1.875em;
+    text-transform:uppercase;
+    padding-bottom:1.7em;
+    padding-left:1em;
+    border-left:10px solid;
+}
+.container p{
+    font-size:1.125em;
+    font-family: 'OpenSansSemiboldRegular';
+    padding:0 1em 2em;
+    line-height:1.5em;
+}
+/*END OF COMMON STYLES*/
+/*PORTFOLIO*/
+.front{
+    background:#e5e5e5;
+    padding:16px 16px 46px 16px;
+    border:1px solid #b3b3b3;
+    z-index: 2;
+    -webkit-transform: rotateY(0deg); /*Fix for Chrome, version <= 22*/
+/*    width:40.625%;*/
+}
+.front img{
+    max-width:100%;
+    min-height:84.6522%;
+    display:block;
+    margin:0 auto;
+}
+.front h3{
+    margin-top:2em;
+    font-family:'OpenSansBold';
+    font-size:1.125em;
+}
+.front, .back{
+    width:571px;
+    height:417px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d; 
+    -o-transform-style: preserve-3d; 
+    -ms-transform-style: preserve-3d; 
+    transform-style: preserve-3d; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.back{
+    background:rgba(174, 3, 47, 0.92);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+/*    width:40.625%;*/
+    border:1px solid #ae032f;
+}
+.back p, .back a{
+    color:#fff;
+    padding:20px;
+}
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    -ms-perspective: 1000;
+    
+    -moz-transform-style: preserve-3d; 
+    width:571px;
+    height:417px;
+    margin:2px 20px 20px 0;
+    float:left;
+}
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flip-container:hover .front, .flip-container.hover .front{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flipper {
+    
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -moz-transform:perspective(1000px);
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/*END OF PORTFOLIO*/
+/*SKILLS BOX*/
+.skill{
+    font-family:'OpenSansRegular';
+    font-weight:900;
+    text-transform:uppercase;
+    color:#fff;
+    text-align:center;
+    padding:0.6em 1.1em;
+    background:#03B62B;
+    margin:1em;
+    float:left;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -webkit-box-shadow:0px 3px 0px rgba(47, 153, 71, 1);
+    -moz-box-shadow:0px 3px 0px rgba(47, 153, 71, 1);
+    box-shadow:0px 3px 0px rgba(47, 153, 71, 1);
+}
+/*END OF SKILLS BOX*/
+/*CONTACT FORM*/
+#contact_form, .socio_contacts{
+    width:40%;
+    float:left;
+    padding-left:1em;
+    margin-right:10%;
+}
+#contact_form div, #contact_form input, #contact_form textarea, #contact_form button{
+    width:100%;
+}
+#contact_form span{
+    display:block;
+    font-family: 'OpenSansSemiboldItalic';
+    font-size:1.125em;
+    padding:0.5em 0 0.3em;
+}
+#contact_form textarea{
+    height:100px;
+}
+#contact_form button{
+    background:#db4025;
+    color:#fff;
+    font-family: 'OpenSansSemiboldRegular';
+    font-size:2em;
+    text-transform:uppercase;
+    padding:0.2em;
+    text-align:center;
+    margin:40px 0 100px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    -webkit-box-shadow: 0px 3px 0px rgba(181, 52, 29, 1);
+    -moz-box-shadow:0px 3px 0px rgba(181, 52, 29, 1);
+    box-shadow:0px 3px 0px rgba(181, 52, 29, 1);
+    border:none!important;
+}
+#contact_form input[type="text"], #contact_form input[type="email"], #contact_form textarea{
+    background:#e5e5e5;
+    border:1px solid #b3b3b3;
+    font-family: 'OpenSansRegular';
+    font-size:1em;
+    padding:0.5em;
+}
+/*END OF CONTACT FORM*/
+/*SOCIO CONTACTS*/
+.socio_contacts span{
+    font-family: 'OpenSansBold';
+    font-size:1.785em;
+    text-transform:uppercase;
+    color:#7b7a7a;
+    display:block;
+    margin-top:1em;
+}
+.socio_contacts a{
+    color:#262626;
+    font-family: 'OpenSansBold';
+    font-size:1.5em;
+    display:block;
+    text-transform:uppercase;
+    text-decoration:none;
+    margin:0.9em 0;
+}
+#my_email{
+    color:#262626!important;
+    font-size:1.5em;
+    text-transform:uppercase;
+    font-family: 'OpenSansBold';
+    text-decoration:none;
+    display:block;
+    margin-top:1em;
+}
+.social_icons{
+    max-width:258px;
+}
+.icons{
+    width:100%;
+    display:block;
+    overflow:hidden;
+    float:left;
+}
+.icons li a{
+    width:26.35658914728682%;
+    height:0;
+    padding-bottom:26.35658914728682%;
+    background:url(../images/sprite.png);
+    background-position:0 0;
+    background-size:300%;
+    display:block;
+    float:left;
+}
+#odesk_icon{
+    background-position:0 0;
+}
+#git_icon{
+    background-position:49% 0;
+}
+#linkedin_icon{
+    background-position:100% 0;
+}
+#skype_icon{
+    background-position:0 100%;
+}
+#google_plus_icon{
+    background-position:50% 100%;
+}
+/*END OF SOCIO CONTACTS*/
+/*UP BUTTON*/
+#up_button a{
+    display:block;
+    width:70px;
+    height:75px;
+    background:url(../images/up.png) 0 0 no-repeat;
+    background-size:100%;
+    position:fixed;
+    right:20px;
+    bottom:40px;
+    opacity:0.5;
+}
+#up_button a:hover{
+    opacity:1;
+}
+/*END OF UP BUTTON*/
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1219px){
+    #contact_form, .socio_contacts{
+        float:none;
+        width:60%;
+    }
+    .hello{
+        width:100%!important;
+    }
+    #slideMenu{
+        margin-left:30%;
+    }
+}
+@media only screen and (max-width: 960px){
+    #slideMenu{
+        margin-left:20%;
+    }
+}
+@media only screen and (max-width: 840px){
+    #contact_form, .socio_contacts{
+        width:80%;
+    }
+    .container{
+        width:80%;
+    }
+    #slideMenu{
+        margin-left:0;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    header{
+        height:100px;
+        background:url(../images/dark_leather-770.jpg) no-repeat;
+    }
+    #default{
+        display:none;
+    }
+    #name-770, #subname-770{
+        display:block;
+        font-family: 'OpenSansBold';
+        text-transform:uppercase;
+        text-align:left;
+        padding-left:95px!important;
+        width:100%;
+    }
+    #name-770{
+        font-size:1.875em;
+        color:#b3b3b3;
+        text-shadow: rgb(224, 224, 224) -1px 0px 1px;
+        padding:0;
+    }
+    #subname-770{
+        font-size:1.125em;
+        color:#fff;
+        padding:0.5em 0 0;
+    }
+    .border{
+        background:#30905d;
+        height:10px;
+        -webkit-box-shadow: 0px -5px 13px rgba(0, 0, 0, 1);
+        -moz-box-shadow:    0px -5px 13px rgba(0, 0, 0, 1);
+        box-shadow:         0px -5px 13px rgba(0, 0, 0, 1);
+    }
+    .flip-container{
+        width:350px;
+        height:256px;
+    }
+    .front, .back{
+        width:350px;
+        height:256px;
+    }
+    .front h3{
+        margin-top:0.6em;
+        font-size:1em;
+    }
+    .back p{
+        font-size:1em;
+        padding:10px;
+    }
+    #showLeft{
+        display:block;
+        background:url(../images/menu.png) no-repeat 0 0;
+        width:50px;
+        height:50px;
+        position:absolute;
+        z-index:2;
+        top:20px;
+        left:15px;
+        outline:none;
+        border:none;
+        cursor:pointer;
+    }
+    #showLeft:hover{
+        background:url(../images/menu.png) no-repeat 100% 0;
+    }
+    .item{
+        display:block;
+        border-left:4px solid #1a1a1a;
+        border-bottom:1px solid #444343;
+        width:200px;
+    }
+    .item:hover{
+        border-left:4px solid;
+    }
+    #slideMenu{
+        margin:0;
+        position:fixed;
+        z-index:3;
+        width:200px;
+        top:0;
+        left:-100%;
+        background:#1a1a1a;
+        -webkit-box-shadow: 5px 1px 13px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    5px 1px 13px rgba(0, 0, 0, 0.75);
+        box-shadow:         5px 1px 13px rgba(0, 0, 0, 0.75);
+    }
+    #slideMenu a{
+        color:#c9c9c9;
+        font-size:1.1em;
+        padding:0.6em 1em;
+    }
+    #slideMenu a:hover{
+        color:inherit;
+    }
+    #black{
+        background:#000;
+        width:100%;
+        height:100%;
+        opacity:0.6;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+    }
+    }
+    @media only screen and (max-width: 586px){
+        #contact_form button{
+            font-size:1.3em;
+        } 
+        #contact_form, .socio_contacts{
+            width:90%;
+        }
+        .container{
+            width:90%;
+        }
+        #up_button a{
+            width:40px;
+            height:43px;
+            right:2px;
+        }
+    }
+    @media only screen and (max-width: 534px){
+        header > p{
+            width:90%;
+        }
+        .hello{
+            padding-left:0!important;        
+        }
+    }
+    @media only screen and (max-width: 458px){
+        #name-770{
+            font-size:1.6em;
+        } 
+        #subname-770{
+            font-size:1.1em;
+            padding:0.7em 0 0;
+        }
+    }
+    @media only screen and (max-width: 426px){
+        .flip-container, .front, .back{
+            width:270px;
+            height:197px;
+        }
+        .front h3{
+            font-size:0.9em;
+        }
+        .back p{
+            font-size:0.7em;
+            padding:5px;
+        }
+        p.hello{
+            font-size:1.3em!important;
+        }
+        .skill{
+            margin:0.5em;
+        }
+        #up_button a{
+            display:none;
+        }
+        body{
+           min-width:455px;
+        }
+    }
+/*END OF MEDIA QUERIES*/

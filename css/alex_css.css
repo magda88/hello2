@@ -129,7 +129,7 @@ html, body{
     color:#262626;
     font-family:'OpenSansRegular';
     min-height:100%;
-    min-width:320px;
+    min-width:100%;
 }
 *{
     box-sizing:border-box;
@@ -165,72 +165,18 @@ header > p {
     margin:0 auto;
 }
 /*NAVIGATION*/
-.menu-collapser {
-    position: relative;
-    background-color: #b3b3b3;
-    color: #262626;
-    font-family:'OpenSansBold';
-    text-transform:uppercase;
-    width: 100%;
-    height: 48px;
-    line-height: 48px;
+#showLeft {
+    display:none;
+}
+#slideMenu h3 {
+    color: #fff;
     font-size: 1.5em;
-    padding: 0 80px;
-    margin:20px 0 0;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-box-shadow: 0px 3px 0px rgba(134, 134, 134, 1);
--moz-box-shadow:    0px 3px 0px rgba(134, 134, 134, 1);
-box-shadow:         0px 3px 0px rgba(134, 134, 134, 1);
+    padding: 20px;
+    font-family:'OpenSansBold';
+    background: #4c4c4c;
+    cursor:pointer;
 }
-.collapse-button {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    width: 40px;
-    background-color: #0E0E0E;
-    border-color:#000;
-    border-radius: 4px;
-    border-style: solid;
-    border-width: 1px;
-    color: #FFFFFF;
-    padding: 7px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: center;
-
-    transform: translate(0, -50%);
-    -o-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%);
-
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box
-}
-.collapse-button .icon-bar {
-    background-color: #F5F5F5;
-    border-radius: 1px 1px 1px 1px;
-    display: block;
-    height: 2px;
-    width: 18px;
-    margin: 2px 0;
-}
-
-ul.slimmenu {
-    list-style-type: none;
-    margin:1em 0 2em 13.5%;
-    padding:0;
-    display:table;
-}
-ul.slimmenu li {
-    position: relative;
-    display: inline-block;
-}
-ul.slimmenu > li {border-bottom: 9px solid; }
-ul.slimmenu li a {
+#slideMenu a {
     display: inline-block;
     text-decoration:none;
     text-transform:uppercase;
@@ -244,37 +190,16 @@ ul.slimmenu li a {
     -moz-transition: background-color 0.5s ease-out;
     -webkit-transition: background-color 0.5s ease-out;
 }
-ul.slimmenu li a:hover {
+#slideMenu a:hover {
     color:#262626;
-    text-decoration: none;
+    text-decoration: none;;
 }
-ul.slimmenu.collapsed li {
-    display: block;
-    width: 100%;
-
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box
-}
-ul.slimmenu.collapsed li a {
-    display: block;
-
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box
-}
-.wrapper{
-    padding-bottom:2em;
-}
-.wrapper:after{
-    content:"";
-    height:0;
-    clear:both;
-    display:block;
-    visibility:hidden;
-}
-.item{
-    border-bottom:9px solid;
+#slideMenu {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display:inline-block;
+    margin:10px 0 10px 40%;
 }
 .about{
     border-color:#30905d;
@@ -292,60 +217,10 @@ ul.slimmenu.collapsed li a {
     border-color:#f6806a;
     color:#db4025;
 }
-/*
-ul {
-    margin-top:1em;
-    float:right;
-}
-#nav li{
-    padding:0.4em 1em;
-    display:inline;
+.item{
+    border-bottom:9px solid;
     float:left;
 }
-#nav li a{
-    text-decoration:none;
-    display:inline-block;
-    text-transform:uppercase;
-    font-size:1.5em;
-    color:inherit;
-    font-family:'OpenSansBold';
-}
-#nav li a:hover{
-    color:#262626;
-}
-li#small_menu{
-    display:none;
-}
-.wrapper{
-    padding-bottom:2em;
-}
-.wrapper:after{
-    content:"";
-    height:0;
-    clear:both;
-    display:block;
-    visibility:hidden;
-}
-.item{
-    border-bottom:9px solid;
-}
-.about{
-    border-color:#30905d;
-    color:#30905d;
-}
-.portfolio{
-    border-color:#dc043c;
-    color:#dc043c;
-}
-.skills{
-    border-color:#03B62B;
-    color:#03B62B;
-}
-.contact{
-    border-color:#f6806a;
-    color:#db4025;
-}
-*/
 /*END OF NAVIGATION*/
 /*GREETING*/
 .hello{
@@ -357,6 +232,16 @@ li#small_menu{
 }
 /*END OF GREETING*/
 /*COMMON STYLES*/
+.wrapper{
+    padding-bottom:2em;
+}
+.wrapper:after{
+    content:"";
+    height:0;
+    clear:both;
+    display:block;
+    visibility:hidden;
+}
 .container h1{
     font-family:'OpenSansBold';
     font-size:1.875em;
@@ -383,6 +268,7 @@ li#small_menu{
 }
 .front img{
     max-width:100%;
+    min-height:84.6522%;
     display:block;
     margin:0 auto;
 }
@@ -607,6 +493,14 @@ li#small_menu{
     .hello{
         width:100%!important;
     }
+    #slideMenu{
+        margin-left:30%;
+    }
+}
+@media only screen and (max-width: 960px){
+    #slideMenu{
+        margin-left:20%;
+    }
 }
 @media only screen and (max-width: 840px){
     #contact_form, .socio_contacts{
@@ -615,24 +509,12 @@ li#small_menu{
     .container{
         width:80%;
     }
+    #slideMenu{
+        margin-left:0;
+    }
 }
 
 @media only screen and (max-width: 770px){
-    ul.slimmenu{
-        margin:0;
-        width:100%;
-    }
-    ul.slimmenu.collapsed li a{
-        font-size:1.2em;
-        color:#262626;
-    }
-    ul.slimmenu.collapsed li a:hover{
-        color:inherit;
-        background-color:#d9d9d9;
-    }
-    ul.slimmenu > li{
-        border-bottom:2px solid #b3b3b3;
-    }
     header{
         height:100px;
         background:url(../images/dark_leather-770.jpg) no-repeat;
@@ -645,12 +527,14 @@ li#small_menu{
         font-family: 'OpenSansBold';
         text-transform:uppercase;
         text-align:left;
+        padding-left:95px!important;
+        width:100%;
     }
     #name-770{
         font-size:1.875em;
         color:#b3b3b3;
         text-shadow: rgb(224, 224, 224) -1px 0px 1px;
-        padding:0.6em 0 0;
+        padding:0;
     }
     #subname-770{
         font-size:1.125em;
@@ -680,6 +564,61 @@ li#small_menu{
         font-size:1em;
         padding:10px;
     }
+    #showLeft{
+        display:block;
+        background:url(../images/menu.png) no-repeat 0 0;
+        width:50px;
+        height:50px;
+        position:absolute;
+        z-index:2;
+        top:20px;
+        left:15px;
+        outline:none;
+        border:none;
+        cursor:pointer;
+    }
+    #showLeft:hover{
+        background:url(../images/menu.png) no-repeat 100% 0;
+    }
+    .item{
+        display:block;
+        border-left:4px solid #1a1a1a;
+        border-bottom:1px solid #444343;
+        width:200px;
+    }
+    .item:hover{
+        border-left:4px solid;
+    }
+    #slideMenu{
+        margin:0;
+        position:fixed;
+        z-index:3;
+        width:200px;
+        top:0;
+        left:-100%;
+        background:#1a1a1a;
+        -webkit-box-shadow: 5px 1px 13px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    5px 1px 13px rgba(0, 0, 0, 0.75);
+        box-shadow:         5px 1px 13px rgba(0, 0, 0, 0.75);
+    }
+    #slideMenu a{
+        color:#c9c9c9;
+        font-size:1.1em;
+        padding:0.6em 1em;
+    }
+    #slideMenu a:hover{
+        color:inherit;
+    }
+    #black{
+        background:#000;
+        width:100%;
+        height:100%;
+        opacity:0.6;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:1;
+    }
     }
     @media only screen and (max-width: 586px){
         #contact_form button{
@@ -691,20 +630,27 @@ li#small_menu{
         .container{
             width:90%;
         }
-    }
-    @media only screen and (max-width: 458px){
-        #name-770{
-            font-size:1.6em;
-            padding:0.8em 0 0;
-        } 
-        #subname-770{
-            font-size:1em;
-            padding:0.7em 0 0;
-        }
         #up_button a{
             width:40px;
             height:43px;
             right:2px;
+        }
+    }
+    @media only screen and (max-width: 534px){
+        header > p{
+            width:90%;
+        }
+        .hello{
+            padding-left:0!important;        
+        }
+    }
+    @media only screen and (max-width: 458px){
+        #name-770{
+            font-size:1.6em;
+        } 
+        #subname-770{
+            font-size:1.1em;
+            padding:0.7em 0 0;
         }
     }
     @media only screen and (max-width: 426px){
@@ -719,14 +665,6 @@ li#small_menu{
             font-size:0.7em;
             padding:5px;
         }
-        #name-770{
-            font-size:1.3em;
-            padding:0.9em 0 0;
-        } 
-        #subname-770{
-            font-size:0.9em;
-            padding:0.8em 0 0;
-        }
         p.hello{
             font-size:1.3em!important;
         }
@@ -737,7 +675,7 @@ li#small_menu{
             display:none;
         }
         body{
-           min-width:426px;
+           min-width:455px;
         }
     }
 /*END OF MEDIA QUERIES*/
