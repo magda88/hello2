@@ -198,7 +198,7 @@ header > p {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    display:table;
+    display:inline-block;
     margin:10px 0 10px 40%;
 }
 .about{
@@ -219,7 +219,7 @@ header > p {
 }
 .item{
     border-bottom:9px solid;
-    display:inline-block;
+    float:left;
 }
 /*END OF NAVIGATION*/
 /*GREETING*/
@@ -584,6 +584,7 @@ header > p {
         display:block;
         border-left:4px solid #1a1a1a;
         border-bottom:1px solid #444343;
+        width:200px;
     }
     .item:hover{
         border-left:4px solid;
