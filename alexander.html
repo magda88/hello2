@@ -5,61 +5,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
         <link rel="stylesheet" href="css/alex_css.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script>
-            $(function(){
-                /*
-                    $(window).resize(function(){
-                        var w = $(window).width();
-                            if(w < 819 ){
-                               $('#nav *[id != "small_menu"]').hide();
-                               $('#small_menu, #small_menu a').css({'display':'list-item'});
-                               $('#small_menu').click(function(e){
-                                    e.preventDefault();
-                                    $('#nav *[id != "small_menu"]').css({'display':'list-item','float':'none'}).show();
-                                    $('#nav').slideToggle(2000);
-                               });
-                                        }
-                    });
-    */
-    
-        $(window).resize(function(){
-        var w = $(window).width();
-            if(w < 819 ){
-                var big = $(".item:not('#small_menu')");
-                big.hide();
-                $("#small_menu").on('click', function(){
-                big.stop().slideToggle(1000);    
-               });
-                        }
-                        else {
-                           big.show(); 
-                        }
-    });
-        
-        
-        
-        
-    
-});
-            
-     
-     
-     
-       /* $(window).resize(function(){
-        var w = $(window).width();
-            if(w < 819 ){
-              $('#nav *[id != "small_menu"]').hide();
-               $("#small_menu").hover(function(){
-                 $('#nav *[id != "small_menu"]').stop(false,true).show();  
-               }, function(){
-                   $('#nav *[id != "small_menu"]').stop(false,true).hide();  
-               });
-                        }
-    });
-});*/
-            
-        </script>
+        <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     </head>
     <body>
          <div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
@@ -78,19 +25,18 @@
             setInterval('Maria_want_to_know()',300);
         </script>    
         <header>
-            <p>Welcome to Alexander's portfolio!</p>
+            <p id="default">Welcome to Alexander's portfolio!</p>
+            <p id="name-770">Alexander Begoon</p>
+            <p id="subname-770">web developer</p>
         </header>
         <div class="border"></div>
+        <ul class="slimmenu">
+                <li class="item about"><a href="#about">About</a></li>
+                <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
+                <li class="item skills"><a href="#skills">Skills</a></li>
+                <li class="item contact"><a href="#contact">Contact me</a></li>
+            </ul>
         <div class="container">
-            <div class='wrapper'>
-                <ul id="nav">
-                    <li class="item about"><a href="#about">About</a></li>
-                    <li class="item portfolio"><a href="#portfolio">Portfolio</a></li>
-                    <li class="item skills"><a href="#skills">Skills</a></li>
-                    <li class="item contact"><a href="#contact">Contact me</a></li>
-                    <li class="item" id="small_menu"><a href="#">Menu</a></li>
-                </ul>
-            </div>
             <p class="hello">Hello!<br>My name is Alexander Begoon, I’m a freelance programmer from Russia.</p>
             <h1 class="about" id="about">I'm a web developer</h1>
             <p>I am a highly resourceful, innovative, and competent PHP developer with extensive experience in the layout, design and coding of websites specifically in PHP format.
@@ -188,9 +134,13 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <textarea id='contact_message' required tabindex="3"></textarea>
                         </label>
                     </div>
-                    <div>
-                        <button name="submit" type="submit" id="contact_submit">Send me a message</button>
+                    <div style="margin:0 auto;width:360px">
+                        <?php echo $kc_o->render_js();?>
                     </div>
+                    <div>
+                        <button name="submit" type="submit" id="postbut">Send me a message</button>
+                    </div>
+                    <input type="hidden" name="capcode" id="capcode" value="false" />
                 </form>
                 <div class="socio_contacts">
                     <span>email me:</span>
@@ -225,5 +175,19 @@ Experienced in developing applications and solutions for a wide range of corpora
   });
 </script>
 <!-- AddThis Smart Layers END -->
+
+<script src="js/jquery.slimmenu.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script>
+$('ul.slimmenu').slimmenu(
+{
+    resizeWidth: '770',
+    collapserTitle: 'Menu',
+    easingEffect:'easeInOutQuint',
+    animSpeed:'medium',
+    indentChildren: true,
+    childrenIndenter: '&raquo;'
+});
+</script>
         </body>
 </html>      
