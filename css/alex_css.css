@@ -731,6 +731,9 @@ header > p {
             margin-bottom:20px;
             font-size:1em;
         }
+        body{
+            overflow-x:hidden;
+        }
     }
     
 /*END OF MEDIA QUERIES*/
