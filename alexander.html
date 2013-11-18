@@ -9,7 +9,7 @@
         <link rel="icon" type="image/png" href="images/favicon.ico">
     </head>
     <body>
-        <!--<div id="window_dimensions" style="position:fixed;right:0;background-color:#345345;width:120px;height:50px;color:#fff;">
+        <div id="window_dimensions" style="position:fixed;right:0;top:120px;background-color:#345345;width:120px;height:50px;color:#fff;">
         </div>
         <script>
             
@@ -23,13 +23,13 @@
             }
             
             setInterval('Maria_want_to_know()',300);
-        </script>-->
+        </script>
         <header>
             <p id="default">Welcome to Alexander's portfolio!</p>
             <p id="name-770">Alexander Begoon</p>
             <p id="subname-770">web developer</p>
             <!-- Class "slideMenu-open" gets applied to menu -->
-        </header>
+        </header> 
         <div class="border"></div>
         <ul class="slideMenu" id="slideMenu">
             <li class="item about"><a href="#about">About</a></li>
@@ -136,7 +136,7 @@ Experienced in developing applications and solutions for a wide range of corpora
                             <textarea id='contact_message' required tabindex="3"></textarea>
                         </label>
                     </div>
-                    <div style="margin:0 auto;width:360px">
+                    <div id="captcha" style="margin:0 auto;width:360px">
                         <?php echo $kc_o->render_js();?>
                     </div>
                     <div>
@@ -201,7 +201,8 @@ Experienced in developing applications and solutions for a wide range of corpora
                     left:0,
                     height:"100%"
                 }, 'slow', function(){
-                    $('body').append('<div id="black"></div>');
+                    $('body').append('<div class="black"></div>');
+                    //$('body').addClass('black');
                 });
             }
             
@@ -209,7 +210,8 @@ Experienced in developing applications and solutions for a wide range of corpora
                 $('#slideMenu').animate({
                     left:"-100%"},
                     'slow', function(){
-                    $('#black').remove();
+                    $('.black').remove();
+                    //$('body > *').not('body > #slideMenu').removeClass('black');
                     $('#slideMenu h3').remove();
                 });
                 
